@@ -28,7 +28,9 @@ The notebook is a guided, exercise-driven session. It covers:
    extracting counterexamples when it does not.
 5. **Bit-vector reasoning** — proving classic "bit tricks" correct.
 6. **Counterexample-guided inductive synthesis (CEGIS)** — synthesising
-   Lyapunov functions with a learned candidate and an SMT verifier.
+   Lyapunov functions with a learned candidate and an SMT verifier. (The toy
+   loop is intentionally heuristic: over the infinite space of candidate
+   functions, CEGIS is not guaranteed to terminate with a certificate.)
 7. **Quantifier alternation** — using `ForAll` to synthesise certificates
    directly.
 
@@ -45,6 +47,14 @@ Install the requirements:
 
 ```bash
 python -m pip install -r requirements.txt
+```
+
+`torch` is installed **CPU-only** from the PyTorch index (no CUDA wheels, much
+smaller download). Should pip ever resolve the default CUDA build for `torch`
+instead, install it explicitly:
+
+```bash
+python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
 ```
 
 Register the environment as a Jupyter kernel (optional, if you use a virtual
@@ -67,10 +77,17 @@ jupyter notebook
 | `An Introduction to SMT-solving.ipynb` | The student copy — exercises left for the reader. |
 | `Completed_An Introduction to SMT-solving.ipynb` | The instructor copy, with solutions and outputs. |
 | `res/` | Figures used in the notebook. |
+| `tools/check_sync.py` | Checks the two notebooks have not drifted apart. |
 | `requirements.txt` | Python dependencies. |
 
 Instructors should teach from the student notebook and keep the completed
 notebook as a reference/answer key.
+
+> **Keeping the pair in sync.** The two notebooks share an identical set of
+> teaching cells; only the exercise/solution cells differ (blank or `TODO` in
+> the student copy, filled in in the completed copy). When editing either
+> notebook, apply the change to both and run
+> `python tools/check_sync.py` — it will fail if any teaching cell has drifted.
 
 ## Further reading
 

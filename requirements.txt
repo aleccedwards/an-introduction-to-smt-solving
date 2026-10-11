@@ -1,3 +1,9 @@
+# Install torch WITHOUT CUDA support, straight from the PyTorch CPU index
+# (much smaller download and no GPU/nvidia wheels). All other packages are
+# pulled from PyPI.
+--index-url https://download.pytorch.org/whl/cpu
+--extra-index-url https://pypi.org/simple
+
 torch
 z3-solver
 cvc5
