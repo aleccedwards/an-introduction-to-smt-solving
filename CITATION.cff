@@ -1,0 +1,63 @@
+cff-version: 1.2.0
+message: "If you use or adapt these teaching materials, please cite this repository."
+title: "An Introduction to SMT Solving"
+abstract: >-
+  Teaching materials for an introductory, hands-on session on satisfiability
+  modulo theories (SMT) solving, aimed at first year AIMS (Autonomous
+  Intelligent Machines and Systems CDT) students. The materials cover SAT and
+  SMT solving with Z3 and CVC5, from propositional satisfiability and Sudoku
+  through SMT-based certification, bit-vector reasoning and
+  counterexample-guided inductive synthesis (CEGIS) of Lyapunov functions.
+  The source code is licensed under MIT; the written teaching content is
+  licensed under CC BY 4.0.
+type: software
+authors:
+  - family-names: Edwards
+    given-names: Alec
+    affiliation: "University of Oxford"
+repository-code: "https://github.com/aleccedwards/an-introduction-to-smt-solving"
+license: MIT
+version: 1.0.0
+date-released: "2026-10-11"
+keywords:
+  - SMT
+  - satisfiability modulo theories
+  - Z3
+  - CVC5
+  - formal verification
+  - Lyapunov functions
+  - counterexample-guided inductive synthesis
+  - teaching
+references:
+  - type: conference-paper
+    title: "Fossil 2.0: Formal Certificate Synthesis for the Verification and Control of Dynamical Models"
+    authors:
+      - family-names: Edwards
+        given-names: Alec
+      - family-names: Peruffo
+        given-names: Andrea
+      - family-names: Abate
+        given-names: Alessandro
+    year: 2024
+    collection-title: "Proceedings of the 27th ACM International Conference on Hybrid Systems: Computation and Control (HSCC '24)"
+    publisher:
+      name: "Association for Computing Machinery"
+    doi: "10.1145/3641513.3651398"
+  - type: conference-paper
+    title: "Neural Abstractions"
+    authors:
+      - family-names: Abate
+        given-names: Alessandro
+      - family-names: Edwards
+        given-names: Alec
+      - family-names: Giacobbe
+        given-names: Mirco
+    year: 2022
+    collection-title: "Advances in Neural Information Processing Systems 35 (NeurIPS 2022)"
+  - type: book
+    title: "SAT/SMT by Example"
+    authors:
+      - family-names: Yurichev
+        given-names: Dennis
+    year: 2022
+    url: "https://smt.st/"
